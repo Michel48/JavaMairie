@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="1074.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+   <children>
+      <Pane layoutX="172.0" prefHeight="51.0" prefWidth="905.0" style="-fx-background-color: #212121;" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="-3.0">
+         <children>
+            <Text fill="WHITE" layoutX="306.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Actes de Naissance" wrappingWidth="348.02734375">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="705.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/amoiriee.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="64.0" layoutX="189.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/amoiriee.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane pickOnBounds="false" prefHeight="652.0" prefWidth="233.0" style="-fx-background-color: #212121;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="182.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="72.0" layoutX="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/admin.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="admin_name" fill="WHITE" layoutX="127.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mr ADMIN" wrappingWidth="90.4589714705944">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#757575" layoutX="67.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVICES">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="ActesPage" fill="WHITE" layoutX="29.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Actes" wrappingWidth="123.00000768899918">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fx:id="CertifPage" fill="WHITE" layoutX="32.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Certificats" wrappingWidth="158.99998158216476">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Label fx:id="nbre_actes" layoutX="172.0" layoutY="161.0" opacity="0.99" prefHeight="17.0" prefWidth="20.0" style="-fx-background-color: #0f9d58;" text="  0" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets bottom="45.0" right="121.0" top="12.0" />
+               </opaqueInsets>
+               <effect>
+                  <Glow level="0.66" />
+               </effect></Label>
+            <Label fx:id="nbres_certif" layoutX="192.0" layoutY="223.0" opacity="0.99" prefHeight="17.0" prefWidth="22.0" style="-fx-background-color: #0f9d58;" text="  0" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets bottom="45.0" right="121.0" top="12.0" />
+               </opaqueInsets>
+               <effect>
+                  <Glow level="0.66" />
+               </effect>
+            </Label>
+            <Text fill="#757575" layoutX="67.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SECURITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="users" fill="WHITE" layoutX="32.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilisateurs">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fx:id="password" fill="WHITE" layoutX="32.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de Passe">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fx:id="logout" fill="WHITE" layoutX="32.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Déconnexion">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="3.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/actes.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="3.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/certif.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="3.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/users.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="3.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/password.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="3.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logout.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="41.0" layoutY="78.0" prefHeight="3.0" prefWidth="123.0" />
+            <Separator layoutX="31.0" layoutY="496.0" prefHeight="3.0" prefWidth="143.0" />
+            <JFXTextField focusColor="#0f9d58" focusTraversable="false" layoutX="22.0" layoutY="85.0" promptText="Recherche" style="-fx-background-color: #ffff;">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Text fill="#575757" layoutX="35.0" layoutY="643.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright  by DreamTeam" />
+         </children></Pane>
+      <JFXTreeTableView layoutX="241.0" layoutY="168.0" prefHeight="480.0" prefWidth="826.0">
+         <columns>
+            <TreeTableColumn prefWidth="75.0" text="REGISTRE" />
+            <TreeTableColumn prefWidth="84.0" text="Date de Naissance" />
+            <TreeTableColumn prefWidth="137.0" text="Lieu de Naissance" />
+            <TreeTableColumn minWidth="0.0" prefWidth="0.0" text="Heure de Naissance" />
+            <TreeTableColumn prefWidth="69.0" text="Nom" />
+            <TreeTableColumn prefWidth="92.0" text="Prénoms" />
+            <TreeTableColumn prefWidth="89.0" text="Nom du Père" />
+            <TreeTableColumn prefWidth="112.0" text="Nom de la Mère" />
+         </columns>
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+      <TextField layoutX="625.0" layoutY="95.0" promptText="Recherche" />
+      <JFXButton layoutX="537.0" layoutY="95.0" style="-fx-background-color: #0f9d58;" text="CHERCHER" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
